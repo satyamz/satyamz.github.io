@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Satyam Zode]]></title>
   <link href="http://satyamz.github.io/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-01-05T23:21:04+05:30</updated>
+  <updated>2016-01-05T23:41:43+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
