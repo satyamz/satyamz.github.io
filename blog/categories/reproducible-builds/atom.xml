@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Satyam Zode]]></title>
-  <link href="http://satyamz.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Reproducible-builds | Satyam Zode]]></title>
+  <link href="http://satyamz.github.io/blog/categories/reproducible-builds/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
   <updated>2016-05-08T20:17:46+05:30</updated>
   <id>http://satyamz.github.io/</id>
@@ -50,29 +50,6 @@ During this summer I will be improving Diffoscope. I will be mainly working on:<
 
 
 <p>My next blog post will be regarding community bonding.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Beginning]]></title>
-    <link href="http://satyamz.github.io/blog/2016/01/06/new-year/"/>
-    <updated>2016-01-06T00:41:48+05:30</updated>
-    <id>http://satyamz.github.io/blog/2016/01/06/new-year</id>
-    <content type="html"><![CDATA[<h2>The beginning</h2>
-
-<p>First of all, Happy new year! I will be blogging here.</p>
-
-
-<!-- more -->
-
-
-<p>I have had pretty much tough time in 2015, but now starting everything from beginning. I hope 2016 will bring more happiness in your life.</p>
-
-
-
-
-<p>Writing a blog is just an another item of my new year resolution list. Though list is quite long and I will try to reflect other items in the list here. So stay tuned!</p>
-
 ]]></content>
   </entry>
   
