@@ -4,7 +4,7 @@
   <title><![CDATA[Satyam Zode]]></title>
   <link href="http://satyamz.github.io/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-06-03T00:24:57+05:30</updated>
+  <updated>2016-06-03T01:41:19+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -37,7 +37,7 @@ Till now, I did/doing following tasks:</p>
 <p>Lunar suggested me to create the specification for &ndash;hide=profiles.
 It can be found here <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a></p>
 
-<p>General purpose of addition of &ndash;hide=profiles to diffoscope is because we want to provide an alternative for tool like OBS pkg-diff. We want to increase userbase of diffoscope and thus number of contributors. Hopefully, I will finish this part as soon as possible.</p>
+<p>General purpose of addition of &ndash;hide=profiles to diffoscope is because we want to provide an alternative for tool like <a href="https://github.com/openSUSE/build-compare">OBS pkg-diff</a>. We want to increase userbase of diffoscope and thus number of contributors. Hopefully, I will finish this part as soon as possible.</p>
 
 <p>We are still discussing, how things should be done!
 Right now, I am researching diff of unreproducible packages and trying to develop use cases. I will update the <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">HideProfilesSpecification</a> wiki with my findings.

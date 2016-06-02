@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/</loc>
-    <lastmod>2016-06-02T23:48:14+05:30</lastmod>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/</loc>
-    <lastmod>2016-05-08T17:45:22+05:30</lastmod>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/2016/01/06/new-year/</loc>
-    <lastmod>2016-01-06T00:41:48+05:30</lastmod>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/archives/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/arquivos/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/about/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/blog/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/code/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/debian/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/gsoc/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/diffoscope/</loc>
-  </url>
-  <url>
-    <loc>http://satyamz.github.io/blog/categories/reproducible-builds/</loc>
-  </url>
+<url>
+<loc>http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/</loc>
+<lastmod>2016-06-02T23:48:14+05:30</lastmod>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/</loc>
+<lastmod>2016-05-08T17:45:22+05:30</lastmod>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/2016/01/06/new-year/</loc>
+<lastmod>2016-01-06T00:41:48+05:30</lastmod>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/archives/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/arquivos/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/about/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/blog/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/code/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/debian/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/gsoc/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/diffoscope/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/reproducible-builds/</loc>
+</url>
 </urlset>
