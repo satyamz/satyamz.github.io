@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gsoc | Satyam Zode]]></title>
   <link href="http://satyamz.github.io/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-05-08T20:36:38+05:30</updated>
+  <updated>2016-06-03T00:24:57+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[GSoC 2016 Week 1: Reproducible Builds in Debian]]></title>
+    <link href="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/"/>
+    <updated>2016-06-02T23:48:14+05:30</updated>
+    <id>http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian</id>
+    <content type="html"><![CDATA[<p>This is a concise report on my previous week.</p>
+
+<!-- more -->
+
+
+<p>I started working from 28 May as the exams ended. This report is bit late. I started work on &ndash;hide=profiles flag.
+Till now, I did/doing following tasks:</p>
+
+<ul>
+<li>Read documentation related to argparse python module.</li>
+<li>Debug the code to find the ways to implement the solution</li>
+<li>Discussed the problem with the community.</li>
+<li>Based on progress I have pushed some code <a href="http://deb.li/ZNDE">here</a> (work is in progress)</li>
+</ul>
+
+
+<p>Lunar suggested me to create the specification for &ndash;hide=profiles.
+It can be found here <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a></p>
+
+<p>General purpose of addition of &ndash;hide=profiles to diffoscope is because we want to provide an alternative for tool like OBS pkg-diff. We want to increase userbase of diffoscope and thus number of contributors. Hopefully, I will finish this part as soon as possible.</p>
+
+<p>We are still discussing, how things should be done!
+Right now, I am researching diff of unreproducible packages and trying to develop use cases. I will update the <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">HideProfilesSpecification</a> wiki with my findings.
+Lunar has given me a proper directions and community is very much helpful. :)</p>
+
+<p>My goal for  an upcoming week is to search for packages which are unreproducible and generate use cases for diffoscope.
+This week I will also try to fix the reproducibility of Debian packages.</p>
+
+<p>I am loving, contributing to Debian and free software and it&rsquo;s a great learning experience. Many things to come in upcoming time :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Google Summer of Code 2016 With Debian Reproducible Builds : Introduction]]></title>
@@ -23,8 +60,6 @@
 <!-- more -->
 
 
-<h2></h2>
-
 <h3>Introduction:</h3>
 
 <p>I am <strong>Satyam Zode</strong> I am a final year Computer Science student (Satyam_z on IRC). I live in Pune, India (GMT +5:30). I am pursuing my undergraduate degree in Computer Engineering from <a href="http://pict.edu"><strong>Pune Institute of Computer Technology, Pune</strong></a>. I have been programming for the past 4 years. I am well versed in C/C++, Python3, and Golang. My Alioth and Github handles are <a href="https://alioth.debian.org/users/satyamz-guest/">satyamz-guest</a> and <a href="https://github.com/satyamz">satyamz</a> respectively. I have been using GNU/Linux and free software from last four years. I am an open source enthusiast and I have been following <a href="http://www.catb.org/esr/faqs/hacker-howto.html"><strong>Hacker culture</strong></a> since past three years.</p>
@@ -32,7 +67,7 @@
 <h3>Accepted into Google Summer of Code 2016 under Debian Project:</h3>
 
 <p>I am glad that I have got an opportunity to contribute to the Debian Project via Google Summer of Code 2016. I am accepted for project <a href="https://summerofcode.withgoogle.com/projects/#4739621762105344"><strong>Improving diffoscope tool and reproducibility of Debian packages</strong></a>. This Summer and beyond I will be working with Debian Reproducible Builds team to improve the debbugging tool called <a href="https://diffoscope.org"><strong>Diffoscope</strong></a> (previously known as debbindiff).
-Thanks a bunch to Debian community, Lunar, Holger Levsen, Reiner Herrmann, Mattia Rizzolo and <a href="https://wiki.debian.org/ReproducibleBuilds">reproducible-builds</a> folks for giving me this opportunity. Here is my GSoC'16 <a href="https://wiki.debian.org/SummerOfCode2016/StudentApplications/SatyamZode">Proposal</a>. And Yay! It really feels great :smile:</p>
+Thanks a bunch to Debian community, Lunar, Holger Levsen, Reiner Herrmann, Mattia Rizzolo and <a href="https://wiki.debian.org/ReproducibleBuilds">reproducible-builds</a> folks for giving me this opportunity. Here is my GSoC'16 <a href="https://wiki.debian.org/SummerOfCode2016/StudentApplications/SatyamZode">Proposal</a>. And Yay! It really feels great.</p>
 
 <h3>Project details:</h3>
 

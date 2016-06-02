@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Arquivos - Satyam Zode</title>
+  <title>GSoC 2016 Week 1: Reproducible Builds in Debian - Satyam Zode</title>
   <meta name="author" content="Satyam Zode">
 
   
-  <meta name="description" content="Arquivos 2016 GSoC 2016 Week 1: Reproducible Builds in Debian
-Jun 02 2016 posted in debian, diffoscope, gsoc, reproducible-builds Google Summer of &hellip;">
+  <meta name="description" content="This is a concise report on my previous week. I started working from 28 May as the exams ended. This report is bit late. I started work on &ndash; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ Jun 02 2016 posted in debian, diffoscope, gsoc, reproducible-builds Google Summe
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://satyamz.github.io/arquivos">
+  <link rel="canonical" href="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Satyam Zode" type="application/atom+xml">
@@ -118,69 +117,100 @@ Jun 02 2016 posted in debian, diffoscope, gsoc, reproducible-builds Google Summe
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Arquivos</h1>
+    
+      
+        <h1 class="entry-title">GSoC 2016 Week 1: Reproducible Builds in Debian</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-06-02T23:48:14+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 pm</span></time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
-  
-    
-    
-      
-      <h2>2016</h2>
-    
-    <article>
-      
-<h1><a href="/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/">GSoC 2016 Week 1: Reproducible Builds in Debian</a></h1>
-<time datetime="2016-06-02T23:48:14+05:30" pubdate><span class='month'>Jun</span> <span class='day'>02</span> <span class='year'>2016</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/diffoscope/'>diffoscope</a>, <a class='category' href='/blog/categories/gsoc/'>gsoc</a>, <a class='category' href='/blog/categories/reproducible-builds/'>reproducible-builds</a></span>
-</footer>
 
 
-    </article>
-  
-    
-    
-    <article>
-      
-<h1><a href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/">Google Summer of Code 2016 With Debian Reproducible Builds : Introduction</a></h1>
-<time datetime="2016-05-08T17:45:22+05:30" pubdate><span class='month'>May</span> <span class='day'>08</span> <span class='year'>2016</span></time>
+<div class="entry-content"><p>This is a concise report on my previous week.</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/diffoscope/'>diffoscope</a>, <a class='category' href='/blog/categories/gsoc/'>gsoc</a>, <a class='category' href='/blog/categories/reproducible-builds/'>reproducible-builds</a></span>
-</footer>
+<!-- more -->
 
 
-    </article>
-  
-    
-    
-    <article>
-      
-<h1><a href="/blog/2016/01/06/new-year/">The Beginning</a></h1>
-<time datetime="2016-01-06T00:41:48+05:30" pubdate><span class='month'>Jan</span> <span class='day'>06</span> <span class='year'>2016</span></time>
+<p>I started working from 28 May as the exams ended. This report is bit late. I started work on &ndash;hide=profiles flag.
+Till now, I did/doing following tasks:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a>, <a class='category' href='/blog/categories/code/'>code</a></span>
-</footer>
+<ul>
+<li>Read documentation related to argparse python module.</li>
+<li>Debug the code to find the ways to implement the solution</li>
+<li>Discussed the problem with the community.</li>
+<li>Based on progress I have pushed some code <a href="http://deb.li/ZNDE">here</a> (work is in progress)</li>
+</ul>
 
 
-    </article>
-  
+<p>Lunar suggested me to create the specification for &ndash;hide=profiles.
+It can be found here <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a></p>
+
+<p>General purpose of addition of &ndash;hide=profiles to diffoscope is because we want to provide an alternative for tool like OBS pkg-diff. We want to increase userbase of diffoscope and thus number of contributors. Hopefully, I will finish this part as soon as possible.</p>
+
+<p>We are still discussing, how things should be done!
+Right now, I am researching diff of unreproducible packages and trying to develop use cases. I will update the <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">HideProfilesSpecification</a> wiki with my findings.
+Lunar has given me a proper directions and community is very much helpful. :)</p>
+
+<p>My goal for  an upcoming week is to search for packages which are unreproducible and generate use cases for diffoscope.
+This week I will also try to fix the reproducibility of Debian packages.</p>
+
+<p>I am loving, contributing to Debian and free software and it&rsquo;s a great learning experience. Many things to come in upcoming time :)</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
-    <footer>
+
+
+  
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
+  
+    <a href="https://plus.google.com/+satyamzode" rel="author">Satyam Zode</a>
+  
+  </span></span>
+
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-06-02T23:48:14+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 pm</span></time>
       
       
-        <div class="sharing">
+
+<span class="categories">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://satyamz.github.io/arquivos/index.html" data-via="SatyamZode" data-counturl="http://satyamz.github.io/arquivos/index.html" >Tweet</a>
+    <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/diffoscope/'>diffoscope</a>, <a class='category' href='/blog/categories/gsoc/'>gsoc</a>, <a class='category' href='/blog/categories/reproducible-builds/'>reproducible-builds</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/" data-via="SatyamZode" data-counturl="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -190,20 +220,24 @@ Jun 02 2016 posted in debian, diffoscope, gsoc, reproducible-builds Google Summe
   
 </div>
 
+    
+    <p class="meta">
       
-    </footer>
-  
+        <a class="basic-alignment left" href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/" title="Previous Post: Google Summer of Code 2016 with Debian Reproducible builds : Introduction">&laquo; Google Summer of Code 2016 with Debian Reproducible builds : Introduction</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 
 </div>
-
-<aside class="sidebar">
-  
-    
-  
-</aside>
-
 
     </div>
   </div>
@@ -219,7 +253,10 @@ Jun 02 2016 posted in debian, diffoscope, gsoc, reproducible-builds Google Summe
       var disqus_shortname = 'satyamz';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/';
+        var disqus_url = 'http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
