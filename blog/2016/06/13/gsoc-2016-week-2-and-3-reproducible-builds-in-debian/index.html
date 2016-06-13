@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>GSoC 2016 Week 1: Reproducible Builds in Debian - Satyam Zode</title>
+  <title>GSoC 2016 Week 2 and 3: Reproducible Builds in Debian - Satyam Zode</title>
   <meta name="author" content="Satyam Zode">
 
   
-  <meta name="description" content="This is a concise report on my previous week. I started working from 28 May as the exams ended. This report is bit late. I started work on &ndash; &hellip;">
+  <meta name="description" content="This is report on my previous week activities with Debian Reproducible-Builds. In last 10 days, I had build different Debain packages at my own using &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian">
+  <link rel="canonical" href="http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Satyam Zode" type="application/atom+xml">
@@ -122,7 +122,7 @@
   <header>
     
       
-        <h1 class="entry-title">GSoC 2016 Week 1: Reproducible Builds in Debian</h1>
+        <h1 class="entry-title">GSoC 2016 Week 2 and 3: Reproducible Builds in Debian</h1>
       
     
     
@@ -132,7 +132,7 @@
 
 
 
-<time class='entry-date' datetime='2016-06-02T23:48:14+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 pm</span></time>
+<time class='entry-date' datetime='2016-06-13T22:52:09+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:52 pm</span></time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -142,35 +142,36 @@
   </header>
 
 
-<div class="entry-content"><p>This is a concise report on my previous week.</p>
+<div class="entry-content"><p>This is report on my previous week activities with Debian Reproducible-Builds.</p>
 
 <!-- more -->
 
 
-<p>I started working from 28 May as the exams ended. This report is bit late. I started work on &ndash;hide=profiles flag.
-Till now, I did/doing following tasks:</p>
+<p>In last 10 days, I had build different Debain packages at my own using prebuilder to experience the reproducibility issues.
+I am thankful to deki and Lunar for suggesting me to do that task. Based on this experience, I managed to find more use cases for <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">&ndash;hide=profiles specification</a>.</p>
+
+<p>I also researched differences of different unreproducible Debian packages on <a href="http://tests.reproducible-builds.org">http://tests.reproducible-builds.org</a> . There are many packages available for examination.</p>
+
+<p>In brief I did following tasks:</p>
 
 <ul>
-<li>Read documentation related to argparse python module.</li>
-<li>Debug the code to find the ways to implement the solution</li>
-<li>Discussed the problem with the community.</li>
-<li>Based on progress I have pushed some code <a href="http://deb.li/ZNDE">here</a> (work is in progress)</li>
+<li>I worked on <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">&ndash;hide=profiles specification</a>. Mostly, I tried to find use cases.</li>
+<li>I made changes to <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a> added detailed information in each use case.</li>
+<li>Read documentation on <code>argcomplete</code> python module and had some hands on experience with module. Purpose of doing this was to add argument completion feature to Diffoscope. pabs had filed bug report for this <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=826711">#826711</a>. I am implementing this feature and discussing issues with pabs as well as researching diffs side-by-side to generate more use cases. Here, Thanks to pabs for guidance and support :)</li>
+<li>I went through different software to see how they are ignoring the stuff. Those are following:
+
+<ul>
+<li><a href="https://github.com/WhisperSystems/Signal-Android/blob/master/apkdiff/apkdiff.py">apkdiff</a></li>
+<li><a href="https://github.com/openSUSE/build-compare">pkg-diff</a></li>
+<li><a href="http://git.gag.com/?p=debian/tar;a=tree">tar</a></li>
+</ul>
+</li>
 </ul>
 
 
-<p>Lunar suggested me to create the specification for &ndash;hide=profiles.
-It can be found here <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a></p>
-
-<p>General purpose of addition of &ndash;hide=profiles to diffoscope is because we want to provide an alternative for tool like <a href="https://github.com/openSUSE/build-compare">OBS pkg-diff</a>. We want to increase userbase of diffoscope and thus number of contributors. Hopefully, I will finish this part as soon as possible.</p>
-
-<p>We are still discussing, how things should be done!
-Right now, I am researching diff of unreproducible packages and trying to develop use cases. I will update the <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">HideProfilesSpecification</a> wiki with my findings.
-Lunar has given me a proper directions and community is very much helpful. :)</p>
-
-<p>My goal for  an upcoming week is to search for packages which are unreproducible and generate use cases for diffoscope.
-This week I will also try to fix the reproducibility of Debian packages.</p>
-
-<p>I am loving, contributing to Debian and free software and it&rsquo;s a great learning experience. Many things to come in upcoming time :)</p>
+<p>Upcoming week will be an important as well as fun week because I will be implementing the use cases. Right now, I am currently looking at different softwares which ignores stuff and taking <a href="https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3">notes</a> of it. So that, it will help me during implementing solution of use cases.
+I am also looking forward to feedback from community on use cases and CLI interfaces.
+Have a great week :)</p>
 </div>
 
 
@@ -195,7 +196,7 @@ This week I will also try to fix the reproducibility of Debian packages.</p>
 
 
 
-<time class='entry-date' datetime='2016-06-02T23:48:14+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 pm</span></time>
+<time class='entry-date' datetime='2016-06-13T22:52:09+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:52 pm</span></time>
       
       
 
@@ -210,7 +211,7 @@ This week I will also try to fix the reproducibility of Debian packages.</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/" data-via="SatyamZode" data-counturl="http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/" data-via="SatyamZode" data-counturl="http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -223,10 +224,8 @@ This week I will also try to fix the reproducibility of Debian packages.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/" title="Previous Post: Google Summer of Code 2016 with Debian Reproducible builds : Introduction">&laquo; Google Summer of Code 2016 with Debian Reproducible builds : Introduction</a>
+        <a class="basic-alignment left" href="/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/" title="Previous Post: GSoC 2016 Week 1: Reproducible builds in Debian">&laquo; GSoC 2016 Week 1: Reproducible builds in Debian</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/" title="Next Post: GSoC 2016 Week 2 and 3: Reproducible Builds in Debian">GSoC 2016 Week 2 and 3: Reproducible Builds in Debian &raquo;</a>
       
     </p>
   </footer>
@@ -256,8 +255,8 @@ This week I will also try to fix the reproducibility of Debian packages.</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/';
-        var disqus_url = 'http://satyamz.github.io/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/';
+        var disqus_identifier = 'http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/';
+        var disqus_url = 'http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/';
         var disqus_script = 'embed.js';
       
     (function () {

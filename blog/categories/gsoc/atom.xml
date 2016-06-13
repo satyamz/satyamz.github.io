@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gsoc | Satyam Zode]]></title>
   <link href="http://satyamz.github.io/blog/categories/gsoc/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-06-03T01:41:19+05:30</updated>
+  <updated>2016-06-14T01:55:24+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[GSoC 2016 Week 2 and 3: Reproducible Builds in Debian]]></title>
+    <link href="http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/"/>
+    <updated>2016-06-13T22:52:09+05:30</updated>
+    <id>http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian</id>
+    <content type="html"><![CDATA[<p>This is report on my previous week activities with Debian Reproducible-Builds.</p>
+
+<!-- more -->
+
+
+<p>In last 10 days, I had build different Debain packages at my own using prebuilder to experience the reproducibility issues.
+I am thankful to deki and Lunar for suggesting me to do that task. Based on this experience, I managed to find more use cases for <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">&ndash;hide=profiles specification</a>.</p>
+
+<p>I also researched differences of different unreproducible Debian packages on <a href="http://tests.reproducible-builds.org">http://tests.reproducible-builds.org</a> . There are many packages available for examination.</p>
+
+<p>In brief I did following tasks:</p>
+
+<ul>
+<li>I worked on <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">&ndash;hide=profiles specification</a>. Mostly, I tried to find use cases.</li>
+<li>I made changes to <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a> added detailed information in each use case.</li>
+<li>Read documentation on <code>argcomplete</code> python module and had some hands on experience with module. Purpose of doing this was to add argument completion feature to Diffoscope. pabs had filed bug report for this <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=826711">#826711</a>. I am implementing this feature and discussing issues with pabs as well as researching diffs side-by-side to generate more use cases. Here, Thanks to pabs for guidance and support :)</li>
+<li>I went through different software to see how they are ignoring the stuff. Those are following:
+
+<ul>
+<li><a href="https://github.com/WhisperSystems/Signal-Android/blob/master/apkdiff/apkdiff.py">apkdiff</a></li>
+<li><a href="https://github.com/openSUSE/build-compare">pkg-diff</a></li>
+<li><a href="http://git.gag.com/?p=debian/tar;a=tree">tar</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p>Upcoming week will be an important as well as fun week because I will be implementing the use cases. Right now, I am currently looking at different softwares which ignores stuff and taking <a href="https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3">notes</a> of it. So that, it will help me during implementing solution of use cases.
+I am also looking forward to feedback from community on use cases and CLI interfaces.
+Have a great week :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[GSoC 2016 Week 1: Reproducible Builds in Debian]]></title>
