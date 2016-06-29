@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Debian | Satyam Zode]]></title>
   <link href="http://satyamz.github.io/blog/categories/debian/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-06-14T02:02:34+05:30</updated>
+  <updated>2016-06-29T20:47:09+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[GSoC 2016 Week 4 and 5: Reproducible Builds in Debian]]></title>
+    <link href="http://satyamz.github.io/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/"/>
+    <updated>2016-06-22T16:17:13+05:30</updated>
+    <id>http://satyamz.github.io/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian</id>
+    <content type="html"><![CDATA[<p>This is a brief report on my last week work with Debian Reproducible Builds.</p>
+
+<!-- more -->
+
+
+<p>In week 4, I mostly worked on designing an interfaces and tackling different issues related to argument completion feature of diffoscope and in week 5 I worked on adding hiding .buildinfo from .changes files.</p>
+
+<h3>Update for last week&rsquo;s activities</h3>
+
+<ul>
+<li>I researched different diffoscope outputs. In <a href="https://tests.reproducible-builds.org/debian/reproducible.html">reproducible-builds testing framework </a> only differences of <code>.buildinfo</code> files are given but I needed diffoscope outputs for <code>.changes</code> files. Hence, I had to <a href="https://wiki.debian.org/ReproducibleBuilds/Howto">build packages locally</a> using <a href="https://wiki.debian.org/ReproducibleBuilds/ExperimentalToolchain">our experimental tool chain</a>. My goal was to generate different outputs and to see how I can hide <code>.buildinfo</code> files from <code>.changes</code>.</li>
+<li><p>I updated argument completion patch as per suggestions given by Paul Wise (pabs). Patch has been reviewed by Mattia Rizzolo, Holger Levsen and <a href="https://anonscm.debian.org/git/reproducible/diffoscope.git/commit/?id=d733cb47903c54a3c4a699131e1b7bde3e492bbf">merged</a> by    Reiner Herrmann (deki) into <a href="https://anonscm.debian.org/git/reproducible/diffoscope.git/commit/?id=77dfd8d3e5e2e5d8ba31e606ef36cbd8f2315743">diffoscope master</a>. This patch closes <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=826711">#826711</a>. Thanks all for support.</p></li>
+<li><p>For <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification#Ignore_.60.buildinfo.60_files_when_comparing_.60.changes.60_files">Ignore <code>.buildinfo</code> files when comparing <code>.changes</code> files</a>, we finally decided to enable this by default and without having any command line option to hide.</p></li>
+<li><p>Last week I researched more on <code>.changes</code> and <code>.buildinfo</code> files. After getting guidelines from Lunar I was able to understand the need of this feature. I am in the middle of implementation of this particular problem.</p></li>
+</ul>
+
+
+<h3>Goal for upcoming week:</h3>
+
+<ul>
+<li>Finish the implementation of <code>hiding .buildinfo from .changes</code></li>
+<li>Start thinking on interfaces and discuss about different use cases.</li>
+</ul>
+
+
+<p>I am thankful to <a href="https://wiki.debian.org/ShirishAgarwal">Shirish Agarwal</a> for helping me through visa process. But, unfortunately I won&rsquo;t get visa till 5th July. So I don&rsquo;t think, I would make it to debconf this year. I will certainly attend Debconf 2017.
+Good news for me is I have passed mid-term evaluations of Google Summer of Code 2016. I will continue my work to improve Debian.
+Even, I have post GSoC plans ready for Debian project ;)</p>
+
+<p>Have a nice day :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[GSoC 2016 Week 2 and 3: Reproducible Builds in Debian]]></title>

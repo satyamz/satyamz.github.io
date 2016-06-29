@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://satyamz.github.io/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/</loc>
+<lastmod>2016-06-22T16:17:13+05:30</lastmod>
+</url>
+<url>
 <loc>http://satyamz.github.io/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/</loc>
 <lastmod>2016-06-13T22:52:09+05:30</lastmod>
 </url>
