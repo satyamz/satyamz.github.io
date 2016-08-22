@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Satyam Zode</title>
+  <title>Google Summer of Code 2016 : Final Report - Satyam Zode</title>
   <meta name="author" content="Satyam Zode">
 
   
-  <meta name="description" content="Project Title : Improving diffoscope tool and reproducibility of Debian packages ">
+  <meta name="description" content="Project Title : Improving diffoscope tool and reproducibility of Debian packages Project details
+Mentor and Co-Mentor
+Project Discussion Introduction &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://satyamz.github.io">
+  <link rel="canonical" href="http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Satyam Zode" type="application/atom+xml">
@@ -116,15 +118,14 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/08/22/google-summer-of-code-2016-final-report/">Google Summer of Code 2016 : Final Report</a></h1>
+      
+        <h1 class="entry-title">Google Summer of Code 2016 : Final Report</h1>
+      
     
     
       <p class="meta">
@@ -135,7 +136,7 @@
 
 <time class='entry-date' datetime='2016-08-22T19:32:04+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>7:32 pm</span></time>
         
-         | <a href="/blog/2016/08/22/google-summer-of-code-2016-final-report/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
         
       </p>
@@ -143,218 +144,238 @@
   </header>
 
 
-  <div class="entry-content"><h2>Project Title : Improving diffoscope tool and reproducibility of Debian packages</h2>
+<div class="entry-content"><h2>Project Title : Improving diffoscope tool and reproducibility of Debian packages</h2>
 
+<!-- more -->
+
+
+<ul>
+<li><a href="#project-details">Project details</a></li>
+<li><a href="#mentor">Mentor and Co-Mentor</a></li>
+<li><a href="#project-discussion">Project Discussion</a>
+
+<ul>
+<li><a href="#introduction">Introduction to Reproducible Builds in Debian</a></li>
+<li><a href="#application-review-period">Application Review Period</a></li>
+<li><a href="#community-bonding-period">Community Bonding Period</a></li>
+</ul>
+</li>
+<li><a href="#project-implementation">Project Implementation</a>
+
+<ul>
+<li><a href="#coding-period">Coding Period</a></li>
+</ul>
+</li>
+<li><a href="#challenges-and-work-left">Challenges and Work Left</a></li>
+<li><a href="#future-work">Future work</a></li>
+<li><a href="#acknowledgement">Acknowledgement</a></li>
+</ul>
+
+
+<p><a name="project-details"></a></p>
+
+<h3>Project details</h3>
+
+<p>  This project aims to improve diffoscope tool and fix Debian packages which are unreproducible in Reproducible builds testing framework. diffoscope recursively unpack archives of many kinds and transform various binary formats into more human readable form to compare them. As a part of this project I worked on argument completion feature and ignoring <code>.buildinfo</code> feature. This project is a part of Reproducible Builds effort</p>
+
+<ul>
+<li>Links:</li>
+<li> <a href="https://reproducible-builds.org/">Reproducible Builds</a></li>
+<li> <a href="https://tests.reproducible-builds.org/debian/reproducible.html">Reproducible Builds Testing framework</a></li>
+<li> <a href="https://diffoscope.org/">Diffoscope</a></li>
+</ul>
+
+
+<p><a name="mentor"></a></p>
+
+<h3>Mentor and Co-Mentor</h3>
+
+<ul>
+<li> Jérémy Bobbio (Lunar) : Mentor</li>
+<li> Reiner Herrmann (deki) : Co-Mentor</li>
+<li> Holger Levsen (h01ger) : Co-Mentor</li>
+<li> Mattia Rizzolo (mapreri) : Co-Mentor</li>
+</ul>
+
+
+<p><a name="project-discussion"></a></p>
+
+<h3>Project Discussion</h3>
+
+<p>  <a name="introduction"></a></p>
+
+<ul>
+<li><h4>Introduction to Reproducible Builds in Debian</h4>
+
+<p>First time I came to know about Reproducible Builds was during Debconf 2015. I started to get involve from the start of March 2016. At the beginning Lunar suggested me to watch the talks given on Reproducible Builds wiki. I read documentation on <a href="https://reproducible-builds.org/">Reproducible Builds site</a> and started to participate in IRC discussions on <code>#debian-reproducible</code>.</p></li>
+</ul>
+
+
+<p>  <a name="application-review-period"></a></p>
+
+<ul>
+<li><h4>Application Review Period</h4>
+
+<p>During proposal discussion period we discussed the areas where work needs to be done. I wrote the proposal and got it <a href="https://lists.alioth.debian.org/pipermail/reproducible-builds/Week-of-Mon-20160314/005049.html">reviewed</a> by community on the <a href="https://lists.alioth.debian.org/pipermail/reproducible-builds/Week-of-Mon-20160321/005071.html">mailing list</a>.
+Simultaneously, I worked on bug <a href="https://bugs.debian.org/818111">#818111</a> and submitted patch for same. That not only helped me to understand the concept of Reproducible Builds but also helped me to setup testing environment required to check the reproducibility of Debian packages.</p></li>
+</ul>
+
+
+<p>   <a name="community-bonding-period"></a></p>
+
+<ul>
+<li><h4>Community Bonding Period <a name="community-bonding-period"></a></h4>
+
+<p>During community bonding period I studied the codebase of diffoscope and also spent enough amount of time for learning Python3 metaprogramming and other OOP concepts.
+We also discussed more about <a href="https://lists.alioth.debian.org/pipermail/reproducible-builds/Week-of-Mon-20160509/005432.html">hiding differences and options for same</a>.
+I couldn&rsquo;t finish my project research work during this period since I had exams in May 2016 and it consumed almost half of community bonding period and week 1 of coding period.</p></li>
+</ul>
+
+
+<p><a name="project-implementation"></a></p>
+
+<h3>Project Implementation</h3>
+
+<p>   <a name="coding-period"></a></p>
+
+<ul>
+<li><h3>Coding Period</h3>
+
+I continued my research regarding behaviour of diffoscope and Lunar suggested me to write specification for hiding options.
+I spent most of the time researching differences present on <a href="https://tests.reproducible-builds.org/debian/reproducible.html"><code>https://tests.reproducible-builds.org/debian/reproducible.html</code></a>. Based on the work done, I came up with specification called <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification"><code>Hide Profile</code></a> for allowing diffoscope to hide different profiles.
+Link to the specification:
+
+<ul>
+<li><a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification">https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification</a></li>
+</ul>
+
+
+<p>Later, I started to work on wish-list feature bug <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=826711"><code>#826711</code></a>.
+Links to commits:</p>
+
+<ul>
+<li><a href="https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=d733cb47903c54a3c4a699131e1b7bde3e492bbf">https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=d733cb47903c54a3c4a699131e1b7bde3e492bbf</a></li>
+<li><a href="https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=77dfd8d3e5e2e5d8ba31e606ef36cbd8f2315743">https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=77dfd8d3e5e2e5d8ba31e606ef36cbd8f2315743</a></li>
+<li><a href="https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c15e6b5f74ae92462dee226a699e120d7017effb">https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c15e6b5f74ae92462dee226a699e120d7017effb</a></li>
+</ul>
+
+
+<p>Above changes added argument completion feature to diffoscope and now you can press tab for option completion.</p>
+
+<ul>
+<li><p>Build different Debian packages using prebuilder to study the output of diffoscope in different cases.</p>
+
+<p> Link : <a href="https://github.com/satyamz/buildinfo-cases/commits?author=satyamz">https://github.com/satyamz/buildinfo-cases/commits?author=satyamz</a></p></li>
+<li><p>Collected information regarding how other Free softwares implements ignore options/interfaces.</p>
+
+<p> Link: <a href="https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3">https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3</a></p></li>
+<li><p>Implementation of <code>Ignoring .buildinfo file while comparing .changes files</code> use case.</p>
+
+<p>Link: <a href="https://gist.github.com/satyamz/c561f9d1ceafefce608a2c282a22f51d">https://gist.github.com/satyamz/c561f9d1ceafefce608a2c282a22f51d</a>
+this patch is yet to be merged and pending for review from community.</p></li>
+</ul>
+</li>
+</ul>
+
+
+<p><a name="challenges-and-work-left"></a></p>
+
+<h3>Challenges and Work Left</h3>
+
+<ul>
+<li>To understand the main purpose of diffoscope in the context of Reproducible Builds. I had to go through complete Reproducible Builds project. It consumed significant amount of time to understand what Reproducible Builds is, why it&rsquo;s necessary important for Free software to build reproducibly. Diffoscope is the last tool in Reproducible Builds toolchain. It was a big challenge for me to understand whole process and objective of diffoscope.</li>
+<li>Work Left:
+
+<ul>
+<li>Implement important use cases given in the <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification"><code>Hide Profiles Specification</code></a>.</li>
+</ul>
+</li>
+</ul>
+
+
+<p><a name="future-work"></a></p>
+
+<h3>Future work</h3>
+
+<ul>
+<li>Based on the research work and implementation done during <a href="#coding-period"><code>Coding Period</code></a> make diffoscope better and enhance ignoring capabilities of diffoscope.</li>
+<li>Improve the parallel processing feature of diffoscope. This particular problem is hard to understand and implement.</li>
+<li>Make diffoscope better by solving <a href="https://bugs.debian.org/cgi-bin/pkgreport.cgi?src=diffoscope"><code>exsting bugs.</code></a></li>
+</ul>
+
+
+<p><a name="acknowledgement"></a></p>
+
+<h3>Acknowledgement</h3>
+
+<p> I would like to express my deepest gratitude to Lunar for mentoring me throughout Google Summer of Code program and for being cool. Lunar&rsquo;s deep knowledge regarding diffoscope and Python skills helped me a lot throughout the project and we literally had great discussions. I would also like to thank Debaian community and Google for giving me this opportunity. Special thanks to Reproducible Builds folks for all the guidance!</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/08/22/google-summer-of-code-2016-final-report/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/">GSoC 2016 Week 4 and 5: Reproducible Builds in Debian</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-06-22T16:17:13+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>4:17 pm</span></time>
-        
-         | <a href="/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a brief report on my last week work with Debian Reproducible Builds.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/">Read on &rarr;</a>
-    </footer>
   
 
 
-    </article>
   
+
+
+  <span class="byline author vcard">Authored by <span class="fn">
   
-    <article>
+    <a href="https://plus.google.com/+satyamzode" rel="author">Satyam Zode</a>
+  
+  </span></span>
+
+
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/">GSoC 2016 Week 2 and 3: Reproducible Builds in Debian</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
 
-<time class='entry-date' datetime='2016-06-13T22:52:09+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>13</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:52 pm</span></time>
-        
-         | <a href="/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is report on my previous week activities with Debian Reproducible-Builds.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
+<time class='entry-date' datetime='2016-08-22T19:32:04+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>7:32 pm</span></time>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/">GSoC 2016 Week 1: Reproducible Builds in Debian</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-06-02T23:48:14+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2016</span></span> <span class='time'>11:48 pm</span></time>
-        
-         | <a href="/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a concise report on my previous week.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/06/02/gsoc-2016-week-1-reproducible-builds-in-debian/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/debian/'>debian</a>, <a class='category' href='/blog/categories/diffoscope/'>diffoscope</a>, <a class='category' href='/blog/categories/gsoc/'>gsoc</a>, <a class='category' href='/blog/categories/reproducible-builds/'>reproducible-builds</a>
+  
+</span>
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/">Google Summer of Code 2016 With Debian Reproducible Builds : Introduction</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-05-08T17:45:22+05:30'><span class='date'><span class='date-month'>May</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:45 pm</span></time>
-        
-         | <a href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is the first blog post among series of posts which I will be writing throughout the summer about Google Summer of Code 2016 under Debian Reproducible Builds Experience.</p>
-
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report/" data-via="SatyamZode" data-counturl="http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-layout="button_count" data-send="false" data-width="300" data-show-faces="false"></div>
+  
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/05/08/google-summer-of-code-2016-with-debian-reproducible-builds-introduction/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  
-    <article>
+    
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/01/06/new-year/">The Beginning</a></h1>
-    
-    
-      <p class="meta">
-        
+        <a class="basic-alignment left" href="/blog/2016/06/22/gsoc-2016-week-4-reproducible-builds-in-debian/" title="Previous Post: GSoC 2016 Week 4 and 5: Reproducible Builds in Debian">&laquo; GSoC 2016 Week 4 and 5: Reproducible Builds in Debian</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-
-
-
-<time class='entry-date' datetime='2016-01-06T00:41:48+05:30'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:41 am</span></time>
-        
-         | <a href="/blog/2016/01/06/new-year/#disqus_thread">Comments</a>
-        
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>The beginning</h2>
-
-<p>First of all, Happy new year! I will be blogging here.</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/01/06/new-year/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    
-  
-</aside>
 
     </div>
   </div>
@@ -370,7 +391,10 @@
       var disqus_shortname = 'satyamz';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report/';
+        var disqus_url = 'http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

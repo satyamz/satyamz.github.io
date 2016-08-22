@@ -155,11 +155,11 @@
 <li>I researched different diffoscope outputs. In <a href="https://tests.reproducible-builds.org/debian/reproducible.html">reproducible-builds testing framework </a> only differences of <code>.buildinfo</code> files are given but I needed diffoscope outputs for <code>.changes</code> files. Hence, I had to <a href="https://wiki.debian.org/ReproducibleBuilds/Howto">build packages locally</a> using <a href="https://wiki.debian.org/ReproducibleBuilds/ExperimentalToolchain">our experimental tool chain</a>. My goal was to generate different outputs and to see how I can hide <code>.buildinfo</code> files from <code>.changes</code>.</li>
 <li><p>I updated argument completion patch as per suggestions given by Paul Wise (pabs). Patch has been reviewed by Mattia Rizzolo, Holger Levsen and <a href="https://anonscm.debian.org/git/reproducible/diffoscope.git/commit/?id=d733cb47903c54a3c4a699131e1b7bde3e492bbf">merged</a> by    Reiner Herrmann (deki) into <a href="https://anonscm.debian.org/git/reproducible/diffoscope.git/commit/?id=77dfd8d3e5e2e5d8ba31e606ef36cbd8f2315743">diffoscope master</a>. This patch closes <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=826711">#826711</a>. Thanks all for support.</p></li>
 <li><p>For <a href="https://wiki.debian.org/ReproducibleBuilds/HideProfilesSpecification#Ignore_.60.buildinfo.60_files_when_comparing_.60.changes.60_files">Ignore <code>.buildinfo</code> files when comparing <code>.changes</code> files</a>, we finally decided to enable this by default and without having any command line option to hide.</p></li>
-<li><p>Last week I researched more on <code>.changes</code> and <code>.buildinfo</code> files. After getting guidelines from Lunar I was able to understand the need of this feature. I am in the middle of implementation of this particular problem.</p></li>
+<li><p>Last week I researched more on <code>.changes</code> and <code>.buildinfo</code> files. After getting guidelines from Lunar I was able to understand the need of this feature. I am in the <a href="#goal">middle</a> of implementation of this particular problem.</p></li>
 </ul>
 
 
-<h3>Goal for upcoming week:</h3>
+<h3><a name="goal"></a>Goal for upcoming week:</h3>
 
 <ul>
 <li>Finish the implementation of <code>hiding .buildinfo from .changes</code></li>
@@ -226,6 +226,8 @@ Even, I have post GSoC plans ready for Debian project ;)</p>
       
         <a class="basic-alignment left" href="/blog/2016/06/13/gsoc-2016-week-2-and-3-reproducible-builds-in-debian/" title="Previous Post: GSoC 2016 Week 2 and 3: Reproducible Builds in Debian">&laquo; GSoC 2016 Week 2 and 3: Reproducible Builds in Debian</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2016/08/22/google-summer-of-code-2016-final-report/" title="Next Post: Google Summer of Code 2016 : Final Report">Google Summer of Code 2016 : Final Report &raquo;</a>
       
     </p>
   </footer>
