@@ -4,7 +4,7 @@
   <title><![CDATA[Satyam Zode]]></title>
   <link href="http://satyamz.github.io/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-08-22T22:21:34+05:30</updated>
+  <updated>2016-08-22T23:00:56+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -315,14 +315,14 @@ This week I will also try to fix the reproducibility of Debian packages.</p>
 
 <h3>Accepted into Google Summer of Code 2016 under Debian Project:</h3>
 
-<p>I am glad that I have got an opportunity to contribute to the Debian Project via Google Summer of Code 2016. I am accepted for project <a href="https://summerofcode.withgoogle.com/projects/#4739621762105344"><strong>Improving diffoscope tool and reproducibility of Debian packages</strong></a>. This Summer and beyond I will be working with Debian Reproducible Builds team to improve the debbugging tool called <a href="https://diffoscope.org"><strong>Diffoscope</strong></a> (previously known as debbindiff).
+<p>I am glad that I have got an opportunity to contribute to the Debian Project via Google Summer of Code 2016. I am accepted for project <a href="https://summerofcode.withgoogle.com/projects/#4739621762105344"><strong>Improving diffoscope tool and reproducibility of Debian packages</strong></a>. This Summer and beyond I will be working with Debian Reproducible Builds team to improve the debugging tool called <a href="https://diffoscope.org"><strong>Diffoscope</strong></a> (previously known as debbindiff).
 Thanks a bunch to Debian community, Lunar, Holger Levsen, Reiner Herrmann, Mattia Rizzolo and <a href="https://wiki.debian.org/ReproducibleBuilds">reproducible-builds</a> folks for giving me this opportunity. Here is my GSoC'16 <a href="https://wiki.debian.org/SummerOfCode2016/StudentApplications/SatyamZode">Proposal</a>. And Yay! It really feels great.</p>
 
 <h3>Project details:</h3>
 
 <p>I will be working on Diffoscope tool which is debbugging tool developed under <a href="https://wiki.debian.org/ReproducibleBuilds"><strong>reproducible-builds</strong></a> effort.
 Basically, Diffoscope compares two files and shows the difference in text and html format. Diffoscope is mainly developed to compare two Debian packages which may consist of binary files, tar files, text files etc. Diffoscope helps to identify difference between two Debian packages with respect to timestamps, file ordering etc. Diffoscope will try to get to the bottom of what makes files or directories different. It will recursively unpack archives of many kinds and transform various binary formats into more human readable form to compare them. It can compare two tarballs, ISO images, Debian packages or PDF just as easily.
-Diffoscope helps to identify the reproduciblity of Debian packages.
+Diffoscope helps to identify the reproducibility of Debian packages.
 During this summer I will be improving Diffoscope. I will be mainly working on:</p>
 
 <ul>
