@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Reproducible-builds | Satyam Zode]]></title>
   <link href="http://satyamz.github.io/blog/categories/reproducible-builds/atom.xml" rel="self"/>
   <link href="http://satyamz.github.io/"/>
-  <updated>2016-08-24T09:37:25+05:30</updated>
+  <updated>2016-08-24T09:41:44+05:30</updated>
   <id>http://satyamz.github.io/</id>
   <author>
     <name><![CDATA[Satyam Zode]]></name>
@@ -143,8 +143,12 @@ Links to commits:</p>
 <li><p>Collected information regarding how other Free softwares implements ignore options/interfaces.</p>
 
 <p> Link: <a href="https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3">https://gist.github.com/satyamz/77d86e1fc78d104c784c0238a3a7c0e3</a></p></li>
-<li><p>Implementation of <code>Ignoring .buildinfo file while comparing .changes files</code> use case.
-<a href="https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c61f41c5128094508d6fff8b746cecc3841f6b27">https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c61f41c5128094508d6fff8b746cecc3841f6b27</a></p></li>
+<li><p>Implementation of <code>Ignoring .buildinfo file while comparing .changes files</code> use case.</p>
+
+<ul>
+<li><a href="https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c61f41c5128094508d6fff8b746cecc3841f6b27">https://anonscm.debian.org/cgit/reproducible/diffoscope.git/commit/?id=c61f41c5128094508d6fff8b746cecc3841f6b27</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
