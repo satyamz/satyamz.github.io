@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Go | Satyam Zode]]></title>
+  <link href="http://satyamz.github.io/blog/categories/go/atom.xml" rel="self"/>
+  <link href="http://satyamz.github.io/"/>
+  <updated>2017-07-28T16:59:48+05:30</updated>
+  <id>http://satyamz.github.io/</id>
+  <author>
+    <name><![CDATA[Satyam Zode]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Maya - the OpenEBS Golang Kit Project]]></title>
+    <link href="http://satyamz.github.io/blog/2017/07/25/maya-the-openebs-golang-kit-project/"/>
+    <updated>2017-07-25T16:23:24+05:30</updated>
+    <id>http://satyamz.github.io/blog/2017/07/25/maya-the-openebs-golang-kit-project</id>
+    <content type="html"><![CDATA[<p>The Kit project in Golang is the common project containing all the standard libraries or packages used across all the Go projects in the organization.</p>
+
+<!--more-->
+
+
+<h2>Motivation</h2>
+
+<p>I attended <a href="http://www.gophercon.in/">GopherCon India</a> 2017, there was a talk on “Package Oriented Design In Go” by <a href="https://twitter.com/goinggodotnet">William Kennedy</a>. In that talk, William explained some really important and thoughtful design principles which We can apply in our day to day life, while writing Go. Hence, I wanted to apply these design philosophies to the Golang projects in which I have been working on as a part of <a href="https://github.com/openebs">OpenEBS</a> project. I learnt a good practice of having a Golang Kit project at the organization level from William’s talk.</p>
+
+<h2>What is the Kit Project?</h2>
+
+<p>The Kit project in Golang is the common project containing all the standard libraries or packages used across all the Go projects in the organization. Packages in the Kit project should follow design philosophies.</p>
+
+<h2>Need for a Kit project</h2>
+
+<p>Sometimes, We write same Golang packages again and again to do the same task at different levels in the different Golang projects under the same organization. For example, we write custom logger package in the different Golang projects. If the custom logger package is same across the organization and can be reused by simply importing it, then this custom logger package is the perfect fit for Kit project.
+You can sense how much time and cost it will save for us when we have a Kit project.</p>
+
+<h2>How to convert existing projects to have “kit”</h2>
+
+<p>   Maya is the kit project in the progress.
+   I will walk through our journey of creating a Kit project called maya for OpenEBS organization from existing Go projects. At <a href="https://github.com/openebs">OpenEBS</a>, as a open source and growing Golang project, We value Golang principles and We try hard to leverage Golang&rsquo;s offerings. Maya is the Kit project for the Application projects like <a href="https://github.com/openebs/mayaserver">maya-apiserver</a>, maya-storage-bot etc. Maya contains all the kubernetes &amp; nomad API’s, common utilities etc. needed for development of maya-apiserver and maya-storage-bot. In the near future, we are trying to push our custom libraries to maya. So that, it will become a promising Golang kit project for OpenEBS community.</p>
+
+<p>We have specifically followed the package oriented design principles in Golang to create maya as a kit project.</p>
+
+<ul>
+<li><h3>Usability</h3>
+
+  We moved common packages such as orchprovider, types, pkg to maya from maya-apiserver. These packages are very generic and can be used in most of the Golang projects in OpenEBS organization. Brief details about new packages in Maya.
+
+<ul>
+<li><p>Orchprovider : <code>orchprovider</code> contains packages of different orchestrators such as kubernetes and nomad.</p></li>
+<li><p>types: <code>types</code> provides all the generic types related to orchestrator.</p></li>
+<li><p>pkg: <code>pkg</code> contains packages like nethelper, util etc.</p></li>
+<li><p>volumes: <code>volumes</code> contain packages related to volume provisioner and profiles.</p></li>
+</ul>
+</li>
+<li><h3>Purpose</h3>
+
+<p>  Packages in the Kit project should be purposeful. These packages must provide, not contain. In maya, we have packages like types, orchprovider, volumes etc. name of these packages suggests the functionality provided by them.</p></li>
+<li><h3>Portability</h3>
+
+<p>  Portability is important factor for packages in kit project. Hence, we are making maya in such a way that it will be easy to import and use in any Golang project. Packages in the Maya are not single point of dependency and all the packages are independent of each other.</p></li>
+</ul>
+
+
+<h2>Project structure for the Maya as Kit project</h2>
+
+<ul>
+<li><h3>Without having Maya as a kit project:</h3>
+
+<ul>
+<li><h4>Project structure for the Maya</h4></li>
+</ul>
+
+
+<pre><code class="``terminal">
+  ├── buildscripts
+  │   └── docker
+  ├── command
+  ├── docs
+  ├── example
+  ├── scripts
+  │   └── config
+  └── templates
+</code></pre>
+
+<ul>
+<li><h4>Project structure for the Maya-apiserver</h4></li>
+</ul>
+
+
+<pre><code class="``">  ├── buildscripts
+  │   └── docker
+  ├── cmd
+  ├── docs
+  ├── lib
+  │   ├── api
+  │   │   └── v1
+  │   ├── artifacts
+  │   │   ├── docker
+  │   │   ├── docker-compose
+  │   │   └── k8s
+  │   ├── config
+  │   ├── flaghelper
+  │   ├── loghelper
+  │   ├── mockit
+  │   │   └── etcmayaserver
+  │   ├── nethelper
+  │   ├── orchprovider
+  │   │   ├── k8s
+  │   │   └── nomad
+  │   ├── profile
+  │   │   ├── orchprovider
+  │   │   └── volumeprovisioner
+  │   ├── server
+  │   ├── util
+  │   └── volumeprovisioner
+  │       └── jiva
+  └── proposals
+</code></pre></li>
+<li><h3>Maya as a kit project</h3>
+
+<ul>
+<li><h4>Project structure for the Maya (Kit Project)</h4></li>
+</ul>
+
+
+<pre><code class="``terminal">
+  ├── buildscripts
+  │   └── docker
+  ├── command
+  ├── docs
+  ├── example
+  ├── orchprovider
+  │   ├── k8s
+  │   │   └── v1
+  │   └── nomad
+  │       └── v1
+  ├── pkg
+  │   ├── nethelper
+  │   └── util
+  ├── scripts
+  │   └── config
+  ├── templates
+  ├── types
+  │   └── v1
+  │       └── profile
+  │           └── orchestrator
+  └── volumes
+      ├── profile
+      │   └── volumeprovisioner
+      └── provisioner
+          └── jiva
+</code></pre>
+
+<ul>
+<li><h4>Project structure for the Maya-apiserver (Application Project)</h4></li>
+</ul>
+
+
+<pre><code class="``">  ├── buildscripts
+  │   └── docker
+  ├── cmd
+  ├── docs
+  ├── lib
+  │   ├── artifacts
+  │   │   ├── docker
+  │   │   ├── docker-compose
+  │   │   └── k8s
+  │   ├── config
+  │   ├── flaghelper
+  │   ├── loghelper
+  │   └── server
+  └── proposals
+</code></pre></li>
+</ul>
+
+
+<h2>Example usage of maya kit project in maya-apiserver</h2>
+
+<p>Maya-apiserver uses maya as a Kit project. Maya-apiserver exposes OpenEBS operations in form of REST APIs. This allows multiple clients e.g. volume related plugins to consume OpenEBS storage operations exposed by Maya API server.</p>
+
+<ul>
+<li><h3>Need for orchestration providers in maya-apiserver</h3>
+
+<p>  Maya-apiserver has been designed keeping storage inside containers in mind. In other words, containerized storage. This leads to maya-apiserver using best of breed container orchestrators. Hence maya-apiserver abstracts the container related orchestration needs in form of orchprovider namespace. Therefore,to achieve above need maya-api server uses orchprovider package provided by Maya.</p></li>
+<li><h3>Need for volumes in the maya-apiserver</h3>
+
+<p>  There can be multiple persistent volume provisioners e.g. jiva &amp; cstor which has the details of workings of its volume. maya-apiserver tries to abstract these into volumes operations whose specifics will reside in individual namespaces i.e. jiva, cstor, etc. Hence, maya-apiserver will make use of volumes package from Maya to satisfy above requirements.</p></li>
+</ul>
+
+
+<h2>Conclusion</h2>
+
+<p>  Golang Kit project should contain packages which are usable, purposeful and portable. Golang Kit projects will improve the efficiency of the organization at both human and code level.</p>
+]]></content>
+  </entry>
+  
+</feed>

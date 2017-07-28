@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://satyamz.github.io/blog/2017/07/25/maya-the-openebs-golang-kit-project/</loc>
+<lastmod>2017-07-25T16:23:24+05:30</lastmod>
+</url>
+<url>
 <loc>http://satyamz.github.io/blog/2016/08/22/google-summer-of-code-2016-final-report/</loc>
 <lastmod>2016-08-22T19:32:04+05:30</lastmod>
 </url>
@@ -53,5 +57,17 @@
 </url>
 <url>
 <loc>http://satyamz.github.io/blog/categories/reproducible-builds/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/go/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/openebs/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/open-source/</loc>
+</url>
+<url>
+<loc>http://satyamz.github.io/blog/categories/design/</loc>
 </url>
 </urlset>
