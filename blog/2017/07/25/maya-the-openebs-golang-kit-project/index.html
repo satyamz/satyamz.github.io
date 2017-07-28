@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Maya - the OpenEBS Golang Kit Project - Satyam Zode</title>
+  <title>Maya - the OpenEBS Go Kit Project - Satyam Zode</title>
   <meta name="author" content="Satyam Zode">
 
   
-  <meta name="description" content="The Kit project in Golang is the common project containing all the standard libraries or packages used across all the Go projects in the organization &hellip;">
+  <meta name="description" content="The Kit project in Go is the common project containing all the standard libraries or packages used across all the Go projects in the organization. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +122,7 @@
   <header>
     
       
-        <h1 class="entry-title">Maya - the OpenEBS Golang Kit Project</h1>
+        <h1 class="entry-title">Maya - the OpenEBS Go Kit Project</h1>
       
     
     
@@ -142,35 +142,35 @@
   </header>
 
 
-<div class="entry-content"><p>The Kit project in Golang is the common project containing all the standard libraries or packages used across all the Go projects in the organization.</p>
+<div class="entry-content"><p>The Kit project in Go is the common project containing all the standard libraries or packages used across all the Go projects in the organization.</p>
 
 <!--more-->
 
 
 <h2>Motivation</h2>
 
-<p>I attended <a href="http://www.gophercon.in/">GopherCon India</a> 2017, there was a talk on “Package Oriented Design In Go” by <a href="https://twitter.com/goinggodotnet">William Kennedy</a>. In that talk, William explained some really important and thoughtful design principles which We can apply in our day to day life, while writing Go. Hence, I wanted to apply these design philosophies to the Golang projects in which I have been working on as a part of <a href="https://github.com/openebs">OpenEBS</a> project. I learnt a good practice of having a Golang Kit project at the organization level from William’s talk.</p>
+<p>I attended <a href="http://www.gophercon.in/">GopherCon India</a> 2017, there was a talk on “Package Oriented Design In Go” by <a href="https://twitter.com/goinggodotnet">William Kennedy</a>. In that talk, William explained some really important and thoughtful design principles which We can apply in our day to day life, while writing Go. Hence, I wanted to apply these design philosophies to the Go projects in which I have been working on as a part of <a href="https://github.com/openebs">OpenEBS</a> project. I learnt a good practice of having a Go Kit project at the organization level from William’s talk.</p>
 
 <h2>What is the Kit Project?</h2>
 
-<p>The Kit project in Golang is the common project containing all the standard libraries or packages used across all the Go projects in the organization. Packages in the Kit project should follow design philosophies.</p>
+<p>The Kit project in Go is the common project containing all the standard libraries or packages used across all the Go projects in the organization. Packages in the Kit project should follow design philosophies.</p>
 
 <h2>Need for a Kit project</h2>
 
-<p>Sometimes, We write same Golang packages again and again to do the same task at different levels in the different Golang projects under the same organization. For example, we write custom logger package in the different Golang projects. If the custom logger package is same across the organization and can be reused by simply importing it, then this custom logger package is the perfect fit for Kit project.
+<p>Sometimes, We write same Go packages again and again to do the same task at different levels in the different Go projects under the same organization. For example, we write custom logger package in the different Go projects. If the custom logger package is same across the organization and can be reused by simply importing it, then this custom logger package is the perfect fit for Kit project.
 You can sense how much time and cost it will save for us when we have a Kit project.</p>
 
 <h2>How to convert existing projects to have “kit”</h2>
 
 <p>   Maya is the kit project in the progress.
-   I will walk through our journey of creating a Kit project called maya for OpenEBS organization from existing Go projects. At <a href="https://github.com/openebs">OpenEBS</a>, as a open source and growing Golang project, We value Golang principles and We try hard to leverage Golang&rsquo;s offerings. Maya is the Kit project for the Application projects like <a href="https://github.com/openebs/mayaserver">maya-apiserver</a>, maya-storage-bot etc. Maya contains all the kubernetes &amp; nomad API’s, common utilities etc. needed for development of maya-apiserver and maya-storage-bot. In the near future, we are trying to push our custom libraries to maya. So that, it will become a promising Golang kit project for OpenEBS community.</p>
+   I will walk through our journey of creating a Kit project called maya for OpenEBS organization from existing Go projects. At <a href="https://github.com/openebs">OpenEBS</a>, as a open source and growing Go project, We value Go principles and We try hard to leverage Go&rsquo;s offerings. Maya is the Kit project for the Application projects like <a href="https://github.com/openebs/mayaserver">maya-apiserver</a>, maya-storage-bot etc. Maya contains all the kubernetes &amp; nomad API’s, common utilities etc. needed for development of maya-apiserver and maya-storage-bot. In the near future, we are trying to push our custom libraries to maya. So that, it will become a promising Go kit project for OpenEBS community.</p>
 
-<p>We have specifically followed the package oriented design principles in Golang to create maya as a kit project.</p>
+<p>We have specifically followed the package oriented design principles in Go to create maya as a kit project.</p>
 
 <ul>
 <li><h3>Usability</h3>
 
-  We moved common packages such as orchprovider, types, pkg to maya from maya-apiserver. These packages are very generic and can be used in most of the Golang projects in OpenEBS organization. Brief details about new packages in Maya.
+  We moved common packages such as orchprovider, types, pkg to maya from maya-apiserver. These packages are very generic and can be used in most of the Go projects in OpenEBS organization. Brief details about new packages in Maya.
 
 <ul>
 <li><p>Orchprovider : <code>orchprovider</code> contains packages of different orchestrators such as kubernetes and nomad.</p></li>
@@ -184,7 +184,7 @@ You can sense how much time and cost it will save for us when we have a Kit proj
 <p>  Packages in the Kit project should be purposeful. These packages must provide, not contain. In maya, we have packages like types, orchprovider, volumes etc. name of these packages suggests the functionality provided by them.</p></li>
 <li><h3>Portability</h3>
 
-<p>  Portability is important factor for packages in kit project. Hence, we are making maya in such a way that it will be easy to import and use in any Golang project. Packages in the Maya are not single point of dependency and all the packages are independent of each other.</p></li>
+<p>  Portability is important factor for packages in kit project. Hence, we are making maya in such a way that it will be easy to import and use in any Go project. Packages in the Maya are not single point of dependency and all the packages are independent of each other.</p></li>
 </ul>
 
 
@@ -317,7 +317,7 @@ You can sense how much time and cost it will save for us when we have a Kit proj
 
 <h2>Conclusion</h2>
 
-<p>  Golang Kit project should contain packages which are usable, purposeful and portable. Golang Kit projects will improve the efficiency of the organization at both human and code level.</p>
+<p>  Go Kit project should contain packages which are usable, purposeful and portable. Go Kit projects will improve the efficiency of the organization at both human and code level.</p>
 </div>
 
 
